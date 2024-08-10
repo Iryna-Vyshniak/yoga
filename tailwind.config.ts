@@ -7,11 +7,47 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '2rem',
+        xs: '1rem',
+        x: '1rem',
+        sm: '1rem',
+        lg: '2rem',
+      },
+      screens: {
+        xs: '320px',
+        x: '480px',
+        sm: '768px',
+        md: '1024px',
+        lg: '1280px',
+        xl: '1440px',
+
+        smOnly: { max: '767.98px' },
+        mdOnly: { min: '768px', max: '1279.98px' },
+      },
+    },
     extend: {
+      fontSize: {
+        '5xl': '2rem',
+        '6xl': '4rem',
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+        '10xl': '8rem',
+        '11xl': '9rem',
+        '12xl': '10rem',
+        '13xl': '11rem',
+        '14xl': '18rem',
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+        tanNimbus: ['TAN Nimbus', 'sans-serif'],
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'text-gradient': 'var(--text-gradient)',
+        'hero': 'var(--image-radial-gradient), url("/assets/images/hero-bg.jpg")',
       },
     },
     letterSpacing: {
@@ -20,17 +56,6 @@ const config: Config = {
       normal: '0.1em',
       wide: '.18em',
       large: '2.28em',
-    },
-    screens: {
-      xs: '320px',
-      x: '480px',
-      sm: '768px',
-      md: '1024px',
-      lg: '1280px',
-      xl: '1440px',
-
-      smOnly: { max: '767.98px' },
-      mdOnly: { min: '768px', max: '1279.98px' },
     },
     colors: {
       light: '#e8effa',
@@ -45,6 +70,33 @@ const config: Config = {
       'beige-60': '#9b5742',
       accent: '#46261e',
       backdrop: 'rgba(1, 10, 5, 0.75)',
+    },
+    dropShadow: {
+      DEFAULT: [
+        '0 0.5px 0.5px rgba(112, 138, 171, 0.3)',
+        '0 1px 1px rgba(255, 255, 255, 0.25)',
+      ],
+      sm: [
+        '0 0.5px 1px rgba(112, 138, 171, 0.2)',
+        '0 0.5px 1px rgba(255, 255, 255, 0.2)',
+      ],
+      md: [
+        '0 4px 5px rgba(112, 138, 171, 0.3)',
+        '0 2px 2px rgba(255, 255, 255, 0.25)',
+      ],
+      lg: [
+        '0 8px 8px rgba(112, 138, 171, 0.4)',
+        '0 6px 8px rgba(255, 255, 255, 0.3)',
+      ],
+      xl: [
+        '0 10px 16px rgba(112, 138, 171, 0.5)',
+        '0 8px 5px rgba(255, 255, 255, 0.4)',
+      ],
+      '2xl': [
+        '0 25px 25px rgba(112, 138, 171, 0.6)',
+        '0 12px 10px rgba(255, 255, 255, 0.5)',
+      ],
+      none: '0 0 #0000',
     },
   },
   plugins: [],
