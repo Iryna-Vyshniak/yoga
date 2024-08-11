@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 
+import { ThemeProvider } from '@/components/common/ThemeProvider'
+import { cn } from '@/lib/utils'
+import meta from '@/shared/data/meta.json'
+
 import './globals.css'
 
 const fontSans = Plus_Jakarta_Sans({
@@ -9,10 +13,12 @@ const fontSans = Plus_Jakarta_Sans({
   variable: '--font-sans',
 })
 
+const { title, description, keywords } = meta
+
 export const metadata: Metadata = {
-  title: 'Yoga Studio - Find Your Balance',
-  description:
-    'Experience serenity and wellness with our expertly guided yoga classes. Explore our class offerings, meet our team, and join our community at our tranquil yoga studio.',
+  title,
+  description,
+  keywords,
 }
 
 export default function RootLayout({
@@ -21,8 +27,22 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body className={fontSans.className}>{children}</body>
+    <html lang='en' suppressHydrationWarning={true}>
+      <body
+        className={cn(
+          'remove-scrollbar text-slate-950 dark:text-white dark:via-slate-950 min-h-screen bg-light bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] bg-cover bg-no-repeat font-sans antialiased dark:bg-dark-300 dark:to-dark-200',
+          fontSans.variable,
+        )}
+      >
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem={true}
+          enableColorScheme={true}
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
