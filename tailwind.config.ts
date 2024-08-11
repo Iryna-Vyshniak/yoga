@@ -1,6 +1,9 @@
 import type { Config } from 'tailwindcss'
 
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 const config: Config = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -42,12 +45,13 @@ const config: Config = {
         '14xl': '18rem',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'sans-serif'],
+        sans: ['var(--font-sans)', ...fontFamily.sans],
         tanNimbus: ['TAN Nimbus', 'sans-serif'],
       },
       backgroundImage: {
         'text-gradient': 'var(--text-gradient)',
-        'hero': 'var(--image-radial-gradient), url("/assets/images/hero-bg.jpg")',
+        'light-hero': 'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
+        'dark-hero': 'var(--dark-radial-gradient), url("/assets/images/hero-bg.jpg")',
       },
     },
     letterSpacing: {
@@ -56,6 +60,17 @@ const config: Config = {
       normal: '0.1em',
       wide: '.18em',
       large: '2.28em',
+    },
+    screens: {
+      xs: '320px',
+      x: '480px',
+      sm: '768px',
+      md: '1024px',
+      lg: '1280px',
+      xl: '1440px',
+
+      smOnly: { max: '767.98px' },
+      mdOnly: { min: '768px', max: '1279.98px' },
     },
     colors: {
       light: '#e8effa',
@@ -70,6 +85,14 @@ const config: Config = {
       'beige-60': '#9b5742',
       accent: '#46261e',
       backdrop: 'rgba(1, 10, 5, 0.75)',
+      dark: {
+        200: '#020617',
+        300: '#0f172a',
+        400: '#1e293b',
+        500: '#475569',
+        600: '#64748b',
+        700: '#94a3b8',
+      },
     },
     dropShadow: {
       DEFAULT: [
@@ -99,6 +122,7 @@ const config: Config = {
       none: '0 0 #0000',
     },
   },
-  plugins: [],
-}
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config
+
 export default config
