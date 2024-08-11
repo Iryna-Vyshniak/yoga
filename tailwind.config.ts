@@ -49,9 +49,31 @@ const config: Config = {
         tanNimbus: ['TAN Nimbus', 'sans-serif'],
       },
       backgroundImage: {
-        'text-gradient': 'var(--text-gradient)',
-        'light-hero': 'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
-        'dark-hero': 'var(--dark-radial-gradient), url("/assets/images/hero-bg.jpg")',
+        'light-text-gradient': 'var(--light-text-gradient)',
+        'dark-text-gradient': 'var(--dark-text-gradient)',
+        'light-hero':
+          'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
+        'dark-hero':
+          'var(--dark-radial-gradient), url("/assets/images/hero-bg.jpg")',
+      },
+      backgroundSize: {
+        '200%': '200% auto',
+        '500%': '500% auto',
+      },
+      keyframes: {
+        typing: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        textShine: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
+      },
+      animation: {
+        'typing-and-shine':
+          'typing 1s steps(15, end) forwards, textShine 2s ease-in-out infinite alternate',
+        shine: 'textShine 1s ease-in-out infinite alternate',
       },
     },
     letterSpacing: {
@@ -77,6 +99,7 @@ const config: Config = {
       'blue-60': '#d6e2f3',
       'blue-70': '#bed1e8',
       'blue-80': '#9db5d2',
+      'blue-85': '#7490b3',
       'blue-90': '#708aab',
       'gray-60': '#a1a5bd',
       'gray-70': '#8b89a5',
@@ -100,8 +123,8 @@ const config: Config = {
         '0 1px 1px rgba(255, 255, 255, 0.25)',
       ],
       sm: [
-        '0 0.5px 1px rgba(112, 138, 171, 0.2)',
-        '0 0.5px 1px rgba(255, 255, 255, 0.2)',
+        '0 0.5px 1px rgba(112, 138, 171, 0.5)',
+        '0 0.5px 1px rgba(255, 255, 255, 0.5)',
       ],
       md: [
         '0 4px 5px rgba(112, 138, 171, 0.3)',
