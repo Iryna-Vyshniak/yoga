@@ -1,0 +1,14 @@
+[
+  {
+    "name": "phone",
+    "label": "+38 (050) 777 77 77",
+    "href": "tel:+380507777777",
+    "ariaLabel": "phone icon"
+  },
+  {
+    "name": "mail",
+    "label": "helentorn23@gmail.com",
+    "href": "mailto:helentorn23@gmail.com",
+    "ariaLabel": "mail icon"
+  }
+]

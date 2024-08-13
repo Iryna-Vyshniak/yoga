@@ -1,0 +1,42 @@
+{
+  "intro": {
+    "introTitle": "Yoga Studio",
+    "introSubtitle": "experience serenity and wellness"
+  },
+  "icons": {
+    "logo": {
+      "name": "yoga-logo",
+      "ariaLabel": "Yoga website logo"
+    },
+    "burger": {
+      "menu": "burger menu",
+      "ariaLabel": "burger menu",
+      "close": "close burger menu"
+    },
+    "mail": {
+      "name": "envelope",
+      "ariaLabel": "envelope email"
+    },
+    "phone": {
+      "name": "phone",
+      "ariaLabel": "phone"
+    }
+  },
+  "socials": {
+    "instagram": {
+      "name": "instagram",
+      "ariaLabel": "Follow us on Instagram",
+      "url": "https://github.com/Iryna-Vyshniak"
+    },
+    "twitter": {
+      "name": "twitter",
+      "ariaLabel": "Follow us on Twitter",
+      "url": "https://github.com/Iryna-Vyshniak"
+    },
+    "facebook": {
+      "name": "facebook",
+      "ariaLabel": "Follow us on Facebook",
+      "url": "https://github.com/Iryna-Vyshniak"
+    }
+  }
+}
