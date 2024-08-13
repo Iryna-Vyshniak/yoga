@@ -1,13 +1,14 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './layout/**/*.{js,ts,jsx,tsx,mdx}',
+    './sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     container: {
@@ -22,13 +23,14 @@ const config: Config = {
       screens: {
         xs: '320px',
         x: '480px',
+        s: '640px',
         sm: '768px',
-        md: '1024px',
+        md: '960px',
         lg: '1280px',
         xl: '1440px',
 
         smOnly: { max: '767.98px' },
-        mdOnly: { min: '768px', max: '1279.98px' },
+        mdOnly: { min: '768px', max: '959.98px' },
       },
     },
     extend: {
@@ -51,6 +53,8 @@ const config: Config = {
       backgroundImage: {
         'light-text-gradient': 'var(--light-text-gradient)',
         'dark-text-gradient': 'var(--dark-text-gradient)',
+        'light-gradient': 'var(--light-radial-gradient)',
+        'dark-gradient': 'var(--dark-radial-gradient)',
         'light-hero':
           'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
         'dark-hero':
@@ -86,16 +90,18 @@ const config: Config = {
     screens: {
       xs: '320px',
       x: '480px',
+      s: '640px',
       sm: '768px',
-      md: '1024px',
+      md: '960px',
       lg: '1280px',
       xl: '1440px',
 
       smOnly: { max: '767.98px' },
-      mdOnly: { min: '768px', max: '1279.98px' },
+      mdOnly: { min: '768px', max: '959.98px' },
     },
     colors: {
       light: '#e8effa',
+      white: '#ffffff',
       'blue-60': '#d6e2f3',
       'blue-70': '#bed1e8',
       'blue-80': '#9db5d2',
@@ -118,10 +124,7 @@ const config: Config = {
       },
     },
     dropShadow: {
-      DEFAULT: [
-        '0 0.5px 0.5px rgba(112, 138, 171, 0.3)',
-        '0 1px 1px rgba(255, 255, 255, 0.25)',
-      ],
+      DEFAULT: ['0 0.5px 0.5px rgba(30, 41, 59, 0.6)'],
       sm: [
         '0 0.5px 1px rgba(112, 138, 171, 0.5)',
         '0 0.5px 1px rgba(255, 255, 255, 0.5)',
@@ -146,6 +149,6 @@ const config: Config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

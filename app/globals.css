@@ -40,7 +40,7 @@
     #cce1ff,
     #d4e7ff,
     #bdd7fb,
-    #bdd7fb
+    #bdd7ff
   );
 }
 
@@ -79,6 +79,7 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 img,
@@ -143,10 +144,6 @@ html {
   scrollbar-width: none;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -199,9 +196,5 @@ svg {
 
   .section-subtitle {
     @apply text-2xl font-normal leading-8 tracking-[0.5px] md:text-3xl xl:text-4xl xl:leading-[1.2] xl:tracking-[0.2px];
-  }
-
-  .text {
-    @apply text-sm leading-5 tracking-[0.2px] xl:text-base xl:leading-6;
   }
 }

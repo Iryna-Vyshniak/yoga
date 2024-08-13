@@ -1,5 +1,5 @@
 {
-  "semi": false,
+  "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": true,
   "printWidth": 80,
@@ -7,6 +7,7 @@
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
   ],
+  "tailwindConfig": "tailwind.config.ts",
   "importOrder": [
     "^react(.*)$",
     "^next(.*)$",
