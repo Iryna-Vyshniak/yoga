@@ -1,4 +1,5 @@
 // NAVBAR
+import { StaticImageData } from 'next/image';
 
 export interface NavbarProps {
   variant: 'header' | 'mobile-menu';
@@ -15,4 +16,16 @@ export interface NavbarLinkProps {
 export interface BurgerMenuProps {
   isOpen: boolean;
   onClose: () => void;
+}
+
+// GALLERY
+export interface GalleryItem {
+  id: string;
+  href: string;
+  source: StaticImageData;
+  label: string;
+  num: string;
+  title: string;
+  slogan: string;
+  description: string;
 }
