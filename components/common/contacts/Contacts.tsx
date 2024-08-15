@@ -11,7 +11,7 @@ import linkContacts from '@/shared/data/linkContacts.json';
 const Contacts = () => {
   const { phone, mail } = data.icons;
   return (
-    <ul className='sOnly:hidden items-center justify-between gap-4 md:flex md:gap-6 smOnly:hidden'>
+    <ul className='sOnly:hidden gap-4 md:flex md:flex-col md:items-start md:gap-2 lg:flex-row lg:items-center lg:justify-between lg:gap-6 smOnly:hidden'>
       {linkContacts.map(({ name, href, ariaLabel, label }) => (
         <li
           key={name}
@@ -20,7 +20,7 @@ const Contacts = () => {
           <a
             href={href}
             aria-label={ariaLabel}
-            className='flex items-center justify-start gap-2'
+            className='flex items-center justify-center gap-2'
           >
             <Icon
               type={iconTypes.COMMON}
