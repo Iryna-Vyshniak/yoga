@@ -29,3 +29,7 @@ export interface GalleryItem {
   slogan: string;
   description: string;
 }
+
+export interface GallerySlideProps {
+  gallery: GalleryItem[];
+}
