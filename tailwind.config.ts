@@ -16,7 +16,6 @@ const config: Config = {
       padding: {
         DEFAULT: '2rem',
         xs: '1rem',
-        x: '1rem',
         sm: '1rem',
         lg: '2rem',
       },
@@ -28,9 +27,6 @@ const config: Config = {
         md: '960px',
         lg: '1280px',
         xl: '1440px',
-
-        smOnly: { max: '767.98px' },
-        mdOnly: { min: '768px', max: '959.98px' },
       },
     },
     extend: {
@@ -146,6 +142,9 @@ const config: Config = {
         '0 12px 10px rgba(255, 255, 255, 0.5)',
       ],
       none: '0 0 #0000',
+    },
+    supports: {
+      sda: 'timeline-scope: none',
     },
   },
   plugins: [require('tailwindcss-animate')],

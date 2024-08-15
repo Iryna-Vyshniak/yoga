@@ -42,6 +42,8 @@
     #bdd7fb,
     #bdd7ff
   );
+
+  --header-height: 4rem;
 }
 
 @font-face {
@@ -156,23 +158,29 @@ svg {
 /* ---------------------- TAILWIND STYLES ---------------------- */
 
 @layer base {
+  * {
+    min-width: 0;
+    min-height: 0;
+  }
+
   /* Remove scrollbar */
-  .remove-scrollbar::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
+  remove-scrollbar::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 0rem;
+    display: none;
   }
 
-  .remove-scrollbar::-webkit-scrollbar-track {
+  remove-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  .remove-scrollbar::-webkit-scrollbar-thumb {
+  remove-scrollbar::-webkit-scrollbar-thumb {
     background: transparent;
-    border-radius: 0px;
+    border-radius: 0rem;
   }
 
-  .remove-scrollbar::-webkit-scrollbar-thumb:hover {
+  remove-scrollbar::-webkit-scrollbar-thumb:hover {
     background: transparent;
   }
 }
@@ -191,10 +199,106 @@ svg {
   }
 
   .section-title {
-    @apply text-center text-3xl font-normal tracking-[0.5px] md:text-4xl xl:text-5xl;
+    @apply text-center text-3xl font-normal tracking-[.0313rem] md:text-4xl xl:text-5xl;
   }
 
   .section-subtitle {
-    @apply text-2xl font-normal leading-8 tracking-[0.5px] md:text-3xl xl:text-4xl xl:leading-[1.2] xl:tracking-[0.2px];
+    @apply text-2xl font-normal leading-8 tracking-[.0313rem] md:text-3xl xl:text-4xl xl:leading-[1.2] xl:tracking-[.0125rem];
+  }
+
+  .animate-grow {
+    animation: grow linear both;
+  }
+
+  .animate-page {
+    animation: page linear both;
+  }
+
+  .animate-progress {
+    animation: progress linear both;
+  }
+
+  .animate-text {
+    animation: text linear both;
+  }
+
+  .animate-text-up {
+    animation: text-up linear both;
+  }
+
+  @keyframes grow {
+    0% {
+      clip-path: inset(0 25% round 35cqmin);
+      transform: translateX(70%) scale(0.15);
+    }
+    58.75% {
+      clip-path: inset(0 round 0);
+      transform: none;
+    }
+    100% {
+      transform: scale(1.5) translateX(-150%);
+    }
+  }
+
+  @keyframes page {
+    0%,
+    100% {
+      opacity: 0.5;
+      font-weight: 400;
+    }
+    58% {
+      opacity: 1;
+      font-weight: 700;
+    }
+  }
+
+  @keyframes progress {
+    from {
+      transform: scaleX(calc(1 / var(--slides)));
+    }
+  }
+
+  @keyframes text {
+    0%,
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: none;
+    }
+    75%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes text-up {
+    0%,
+    25% {
+      opacity: 0.5;
+      transform: translateY(105%);
+    }
+    50% {
+      opacity: 1;
+      transform: none;
+    }
+    75%,
+    100% {
+      opacity: 0.5;
+      transform: translateY(-105%);
+    }
+  }
+
+  .overlap {
+    display: grid;
+    grid-template-areas: 'overlap';
+  }
+
+  .overlap > * {
+    grid-area: overlap;
+  }
+  .container-h {
+    min-height: calc(100vh - var(--header-height, 4rem));
   }
 }
