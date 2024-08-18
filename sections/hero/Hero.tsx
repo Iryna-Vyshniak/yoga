@@ -77,7 +77,7 @@ const Hero = () => {
         {/* BUTTON DOWN */}
         <Link
           href={heroHref}
-          className='absolute bottom-4 flex cursor-pointer flex-col items-center justify-center rounded-sm p-4 backdrop-blur-sm'
+          className='absolute bottom-6 flex cursor-pointer flex-col items-center justify-center rounded-sm p-4 backdrop-blur-sm'
         >
           <p
             className={`text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-white hover:dark:text-blue-60 ${!isMediumOrLarger ? 'x:text-base' : ''} xl:text-base`}
