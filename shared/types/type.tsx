@@ -33,3 +33,21 @@ export interface GalleryItem {
 export interface GallerySlideProps {
   gallery: GalleryItem[];
 }
+
+// for animation view
+
+export enum Direction {
+  Left = 'left',
+  Right = 'right',
+  Top = 'top',
+  Down = 'down',
+}
+
+export interface AnimatedInViewProps {
+  children: React.ReactNode;
+  direction?: Direction;
+  duration?: number;
+  delay?: number;
+  triggerOnHover?: boolean;
+  reverse?: boolean;
+}
