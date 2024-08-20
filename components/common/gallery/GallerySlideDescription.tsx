@@ -8,7 +8,7 @@ const GallerySlideDescription: React.FC<GallerySlideProps> = ({ gallery }) => {
       {gallery.map(({ id, label, description }) => (
         <p
           key={id}
-          className='animate-text translate-y-[50%] skew-y-[1.5deg]'
+          className='animate-text translate-y-[50%] skew-y-[1.5deg] text-dark-300 dark:text-white 2xl:dark:text-dark-300'
           style={{
             animationTimeline: label,
             animationRangeStart: '30cqw',

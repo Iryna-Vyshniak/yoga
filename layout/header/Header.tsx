@@ -37,8 +37,8 @@ const Header = () => {
   }, [isMediumOrLarger, isOpen]);
 
   return (
-    <header className='fixed left-0 right-0 top-0 z-50 h-[var(--header-height)] w-full bg-white dark:bg-blue-90/80'>
-      <div className='container flex w-full items-center justify-between gap-4 p-4'>
+    <header className='fixed left-0 right-0 top-0 z-50 h-11 w-full bg-white dark:bg-blue-90/80 sm:h-[var(--header-height)]'>
+      <div className='container flex w-full items-center justify-between gap-4 py-2'>
         <Link href='#hero'>
           <Icon
             type={iconTypes.COMMON}

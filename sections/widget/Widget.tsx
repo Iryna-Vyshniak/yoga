@@ -11,6 +11,7 @@ import Icon, {
 import data from '@/shared/data/common.json';
 import linkContacts from '@/shared/data/linkContacts.json';
 import useMediaMatch from '@/shared/hooks/useMediaMatch';
+import { Direction } from '@/shared/types/type';
 
 const Widget = () => {
   const { phone } = data.icons;
@@ -18,11 +19,10 @@ const Widget = () => {
   const isMediumOrLarger = useMediaMatch('(min-width: 768px)');
 
   return (
-    <section className='fixed bottom-0 flex h-screen w-full'>
-      <AnimatedInView>
-        {' '}
+    <section className='pointer-events-none fixed bottom-0 right-6 flex h-screen w-full'>
+      <AnimatedInView direction={Direction.Right} duration={1000} delay={200}>
         <a
-          className='box-shadow-md duration-250 easy-in-out absolute bottom-6 right-6 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-gray-60 bg-blue-80 transition-all hover:border-blue-80 hover:bg-blue-70 focus:border-blue-80 focus:bg-blue-70 x:h-12 x:w-12'
+          className='box-shadow-md duration-250 easy-in-out pointer-events-auto absolute bottom-6 right-6 z-[70] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-gray-60 bg-blue-80 transition-all hover:border-blue-80 hover:bg-blue-70 focus:border-blue-80 focus:bg-blue-70 x:h-12 x:w-12'
           href={href}
           aria-label={ariaLabel}
         >

@@ -9,7 +9,7 @@ const GallerySlideCaptions: React.FC<GallerySlideProps> = ({ gallery }) => {
         <div key={id}>
           <p className='block overflow-clip'>
             <span
-              className='tracking-widest animate-text-up mb-3 block font-medium uppercase md:mb-4'
+              className='tracking-widest animate-text-up mb-6 block font-medium uppercase text-dark-300 md:mb-4'
               style={{
                 animationTimeline: label,
                 animationRangeStart: '30cqw',
@@ -19,7 +19,7 @@ const GallerySlideCaptions: React.FC<GallerySlideProps> = ({ gallery }) => {
             </span>
           </p>
           <p
-            className='animate-text translate-y-[105%] skew-y-6 pb-7 font-tanNimbus text-4xl md:text-5xl md:leading-[8rem]'
+            className='animate-text translate-y-[105%] skew-y-6 pb-7 font-tanNimbus text-5xl text-dark-300 drop-shadow-md md:text-6xl md:leading-[8rem]'
             style={{
               animationTimeline: label,
               animationRangeStart: '30cqw',

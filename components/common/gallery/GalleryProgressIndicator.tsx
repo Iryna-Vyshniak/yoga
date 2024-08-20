@@ -4,30 +4,49 @@ import { GallerySlideProps } from '@/shared/types/type';
 
 const GalleryProgressIndicator: React.FC<GallerySlideProps> = ({ gallery }) => {
   return (
-    <div className='relative z-40 my-auto -ml-20 w-40 rotate-90 transform'>
-      <nav className='flex w-40 justify-between gap-5 text-sm text-dark-300 dark:text-white'>
-        {gallery.map(({ id, href, num, label }) => (
-          <a
-            key={id}
-            href={href}
-            className='animate-page pointer-events-auto -rotate-90 transform text-dark-300 dark:text-white dark:drop-shadow'
-            style={{
-              animationTimeline: label,
-              animationRangeStart: '10cqw',
-            }}
-          >
-            {num}
-          </a>
-        ))}
-      </nav>
-
-      <div className='mt-2 w-40 bg-dark-600/60'>
-        <div
-          className='animate-progress h-0.5 origin-left bg-dark-400 dark:bg-white dark:drop-shadow'
-          style={{ animationTimeline: '--scroller' }}
-        ></div>
+    <nav className='relative top-20 z-50 my-auto -ml-8 x:-ml-6'>
+      <div className='relative'>
+        {' '}
+        <ul className='relative z-30 flex w-[180%] flex-col justify-between gap-5 text-sm text-dark-600 dark:text-white'>
+          {gallery.map(({ id, href, num, label }) => (
+            <li
+              key={id}
+              className='p-[1.1rem]'
+              style={{
+                animationTimeline: label,
+                animationRangeStart: '10cqw',
+              }}
+            >
+              {' '}
+              <a
+                href={href}
+                className='animate-indicator indicator-link pointer-events-auto cursor-pointer'
+                style={{
+                  animationTimeline: label,
+                  animationRangeStart: '10cqw',
+                }}
+              >
+                <span
+                  className='animate-indicator ml-4 text-white dark:drop-shadow'
+                  style={{
+                    animationTimeline: label,
+                    animationRangeStart: '10cqw',
+                  }}
+                >
+                  {num}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className='indicator animate-indicator absolute left-[1.35rem] top-1/2 z-40 -translate-y-1/2'>
+          <div
+            className='animate-progress h-0.5 origin-left bg-dark-600 dark:bg-white dark:drop-shadow'
+            style={{ animationTimeline: '--scroller' }}
+          ></div>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -5,7 +5,7 @@ import { GallerySlideProps } from '@/shared/types/type';
 const GallerySlider: React.FC<GallerySlideProps> = ({ gallery }) => {
   return (
     <div
-      className='remove-scrollbar pointer-events-auto absolute inset-0 -z-10 hidden h-full w-full snap-x snap-mandatory overflow-x-auto scroll-smooth supports-sda:block'
+      className='custom-scrollbar pointer-events-auto absolute inset-0 -z-10 hidden h-full w-full snap-x snap-mandatory overflow-x-auto scroll-smooth supports-sda:block'
       style={{ scrollTimeline: '--scroller x' }}
     >
       <ul className='grid h-full w-fit auto-cols-[70cqw] grid-flow-col pr-[30cqw]'>
