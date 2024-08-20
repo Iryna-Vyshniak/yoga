@@ -28,6 +28,7 @@ export interface GalleryItem {
   title: string;
   slogan: string;
   description: string;
+  url_img: string;
 }
 
 export interface GallerySlideProps {
@@ -50,4 +51,13 @@ export interface AnimatedInViewProps {
   delay?: number;
   triggerOnHover?: boolean;
   reverse?: boolean;
+}
+
+// for classes section
+
+export interface ClassItem {
+  id: string;
+  title: string;
+  description: string;
+  image: StaticImageData;
 }
