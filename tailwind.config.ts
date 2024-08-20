@@ -14,8 +14,10 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '2rem',
+        DEFAULT: '1rem',
         xs: '1rem',
+        x: '1rem',
+        s: '1rem',
         sm: '1rem',
         lg: '2rem',
       },
@@ -55,6 +57,10 @@ const config: Config = {
           'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
         'dark-hero':
           'var(--dark-radial-gradient), url("/assets/images/hero-bg.jpg")',
+        'light-bg-logo':
+          'var(--light-logo-radial-gradient), url("/assets/icons/yoga-logo.svg")',
+        'dark-bg-logo':
+          'var(--dark-logo-radial-gradient), url("/assets/icons/yoga-logo.svg")',
       },
       backgroundSize: {
         '200%': '200% auto',
@@ -91,6 +97,7 @@ const config: Config = {
       md: '960px',
       lg: '1280px',
       xl: '1440px',
+      '2xl': '1846px',
 
       smOnly: { max: '767.98px' },
       mdOnly: { min: '768px', max: '959.98px' },
