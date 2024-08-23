@@ -75,11 +75,20 @@ const config: Config = {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '100% 50%' },
         },
+        'background-shine': {
+          from: {
+            backgroundPosition: '0 0',
+          },
+          to: {
+            backgroundPosition: '-200% 0',
+          },
+        },
       },
       animation: {
         'typing-and-shine':
           'typing 1s steps(15, end) forwards, textShine 2s ease-in-out infinite alternate',
         shine: 'textShine 1s ease-in-out infinite alternate',
+        'background-shine': 'background-shine 2s linear infinite',
       },
     },
     letterSpacing: {
