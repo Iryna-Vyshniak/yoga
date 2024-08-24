@@ -61,3 +61,25 @@ export interface ClassItem {
   description: string;
   image: StaticImageData;
 }
+
+// prices
+
+export interface PricingCardProps {
+  isYearly?: boolean;
+  title: string;
+  monthlyPrice?: number;
+  yearlyPrice?: number;
+  description: string;
+  features: string[];
+  schedule: string;
+  actionLabel: string;
+  popular?: boolean;
+  exclusive?: boolean;
+  yearlyFeatures?: string[];
+  yearlySchedule?: string;
+  yearlyDescription?: string;
+}
+
+export interface PricingSwitchProps {
+  onSwitch: (value: string) => void;
+}
