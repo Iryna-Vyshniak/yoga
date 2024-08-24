@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Simple Plan",
+    "subtitle": "Basic access for one month or one year",
+    "monthlyPrice": 30,
+    "yearlyPrice": 300,
+    "description": "Great for individuals who want to maintain a regular workout routine.",
+    "features": [
+      "Access to all sessions",
+      "Towel included",
+      "Water included",
+      "Yoga mat included"
+    ],
+    "schedule": "Monday - Friday\n08:00 am - 10:00 am",
+    "actionLabel": "Choose this plan",
+    "yearlyFeatures": [
+      "Free access to two workshops per year",
+      "5% discount on additional services"
+    ],
+    "yearlyDescription": "Get full access for a year with additional benefits and savings.",
+    "yearlySchedule": "Monday - Friday\n07:00 am - 10:00 am"
+  },
+  {
+    "title": "Pro Plan",
+    "subtitle": "Advanced access with more features",
+    "monthlyPrice": 50,
+    "yearlyPrice": 500,
+    "description": "Perfect for those who want to take their training to the next level.",
+    "features": [
+      "Priority booking for classes",
+      "Access to evening sessions",
+      "Towel included",
+      "Water included",
+      "Yoga mat included"
+    ],
+    "schedule": "Monday - Saturday\n06:00 pm - 08:00 pm",
+    "actionLabel": "Choose this plan",
+    "popular": true,
+    "yearlyFeatures": [
+      "Free personal coaching session",
+      "Access to exclusive events",
+      "10% discount on additional services"
+    ],
+    "yearlyDescription": "Get the most out of your training with added benefits for a whole year.",
+    "yearlySchedule": "Monday - Saturday\n06:00 pm - 09:00 pm"
+  },
+  {
+    "title": "Premium Plan",
+    "subtitle": "Unlimited access with exclusive perks",
+    "monthlyPrice": 80,
+    "yearlyPrice": 800,
+    "description": "For those who demand the best, with unlimited access and VIP treatment.",
+    "features": [
+      "Unlimited access to all sessions",
+      "Towel included",
+      "Water included",
+      "Yoga mat included",
+      "Personal locker",
+      "Free entry to workshops"
+    ],
+    "schedule": "Monday - Sunday\n07:00 am - 10:00 pm",
+    "actionLabel": "Choose this plan",
+    "exclusive": true,
+    "yearlyFeatures": [
+      "VIP access to all events",
+      "Free personal coaching sessions",
+      "20% discount on additional services",
+      "Personalized diet plan"
+    ],
+    "yearlyDescription": "Experience the best with VIP treatment and unlimited access for a year.",
+    "yearlySchedule": "Monday - Sunday\n06:00 am - 10:00 pm"
+  }
+]
