@@ -22,7 +22,7 @@ const GallerySlideImage: React.FC<GallerySlideProps> = ({ gallery }) => {
               backgroundImage: `url(${url_img})`,
             }}
           >
-            <div className='absolute inset-0 z-[1] h-full w-full bg-light-gradient dark:bg-dark-gradient'></div>
+            <div className='absolute inset-0 z-[1] h-full w-full bg-light-gradient dark:bg-dark-linear-gradient'></div>
           </div>{' '}
           <Image
             src={source}

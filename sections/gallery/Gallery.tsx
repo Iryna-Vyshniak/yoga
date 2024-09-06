@@ -14,7 +14,6 @@ import { Direction } from '@/shared/types/type';
 const Gallery = () => {
   return (
     <AnimatedInView direction={Direction.Right} duration={1000} delay={200}>
-      {' '}
       <section
         id='gallery'
         className='section container-h relative isolate flex flex-col gap-8 overflow-clip bg-light-gradient supports-sda:pointer-events-none dark:bg-dark-gradient'

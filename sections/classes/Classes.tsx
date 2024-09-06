@@ -5,7 +5,8 @@ import React from 'react';
 import Image from 'next/image';
 
 import AnimatedInView from '@/components/common/animated/AnimatedInView';
-import Devider from '@/public/assets/icons/devider.svg';
+import Devider from '@/components/ui/devider/Devider';
+import SectionHeader from '@/components/ui/section.header/SectionHeader';
 import { CLASSES } from '@/shared/data/classes';
 import { Direction } from '@/shared/types/type';
 
@@ -13,28 +14,18 @@ const Classes = () => {
   return (
     <section
       id='classes'
-      className='section container-h custom-scroll flex h-full items-center justify-center overflow-y-auto bg-light-bg-logo bg-contain bg-center bg-no-repeat py-12 dark:bg-dark-bg-logo'
+      className='section container-h flex h-full items-center justify-center overflow-y-auto bg-light-bg-logo bg-contain bg-center bg-no-repeat py-12 dark:bg-dark-bg-logo'
     >
-      <div className='container relative grid h-full grid-rows-[auto_1fr] gap-4'>
-        <div className='mt-5'>
-          {' '}
-          <h2 className='text-gray-800 sr-only mb-2 text-center font-tanNimbus text-3xl x:mb-8'>
-            Classes
-          </h2>
-          <div className='flex w-full items-center justify-center'>
-            <div className='relative flex w-full max-w-xs items-center justify-center'>
-              <div className='relative flex w-full items-center justify-center before:mr-4 before:h-[1px] before:flex-1 before:bg-blue-85 before:content-[""] after:ml-4 after:h-[1px] after:flex-1 after:bg-blue-85 after:content-[""] before:dark:bg-white after:dark:bg-white'>
-                <Image
-                  src={Devider}
-                  alt='separator'
-                  width={24}
-                  height={24}
-                  className='relative z-10 text-blue-85 dark:text-white'
-                />
-              </div>
-            </div>
-          </div>
-        </div>{' '}
+      <div className='container relative grid h-full grid-rows-[auto_auto_1fr] gap-4 overflow-x-auto'>
+        <AnimatedInView direction={Direction.Right} duration={1000} delay={220}>
+          <SectionHeader
+            title='Classes'
+            subtitle='Unroll your mat and find your perfect flow'
+          />
+        </AnimatedInView>
+        <AnimatedInView direction={Direction.Right} duration={1000} delay={230}>
+          <Devider />
+        </AnimatedInView>
         <ul className='yoga-classes-list grid h-full auto-rows-max grid-cols-1 gap-2 pb-4 x:grid-flow-row x:grid-cols-2 x:place-items-center md:gap-4 lg:grid-cols-3 lg:grid-rows-1'>
           {CLASSES.map(({ image, title, description, id }) => (
             <li
@@ -45,7 +36,7 @@ const Classes = () => {
               <AnimatedInView
                 direction={Direction.Right}
                 duration={1000}
-                delay={200}
+                delay={240}
               >
                 <div className='yoga-classes-wrapper flex w-full flex-col gap-1 x:gap-4'>
                   <div className='box-shadow-md w-full flex-auto rounded-lg border-2 border-blue-70'>

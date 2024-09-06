@@ -71,7 +71,7 @@ const Hero = () => {
           {/* Balance Text */}
           {isMediumOrLarger && (
             <div className='top-60% absolute left-[14%] z-40 flex w-1/2 translate-y-[60%] transform items-center justify-between'>
-              <h3 className='text-slate-800 duration-250 w-1/2 text-2xl dark:text-white x:text-3xl md:text-4xl lg:text-6xl lg:leading-[3.6rem]'>
+              <h3 className='text-slate-800 duration-250 w-1/2 text-2xl dark:text-dark-200 x:text-3xl md:text-4xl lg:text-6xl lg:leading-[3.6rem]'>
                 {pretitle}
               </h3>
             </div>
@@ -86,7 +86,7 @@ const Hero = () => {
           className='absolute bottom-6 flex cursor-pointer flex-col items-center justify-center rounded-sm p-4 backdrop-blur-sm'
         >
           <p
-            className={`text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-white hover:dark:text-blue-60 ${!isMediumOrLarger ? 'x:text-base' : ''} xl:text-base`}
+            className={`duration-250 cursor-pointer text-xs text-dark-200 transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-dark-200 ${!isMediumOrLarger ? 'x:text-base' : ''} xl:text-base`}
           >
             Get started
           </p>
@@ -95,14 +95,14 @@ const Hero = () => {
             name={commonIcons.CHEVRON_DOWN}
             size={iconSizes.CUSTOM}
             ariaLabel={ariaLabelIcon}
-            className='text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-white hover:dark:text-blue-60'
+            className='text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-dark-200 hover:dark:text-blue-60'
           />
           <Icon
             type={iconTypes.COMMON}
             name={commonIcons.CHEVRON_DOWN}
             size={iconSizes.CUSTOM}
             ariaLabel={ariaLabelIcon}
-            className='text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-white hover:dark:text-blue-60'
+            className='text-slate-800 duration-250 cursor-pointer text-xs transition-all ease-in-out hover:text-blue-90 focus:text-accent dark:text-dark-200 hover:dark:text-blue-60'
           />
         </Link>
       </div>

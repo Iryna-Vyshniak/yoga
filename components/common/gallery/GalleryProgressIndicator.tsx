@@ -7,7 +7,7 @@ const GalleryProgressIndicator: React.FC<GallerySlideProps> = ({ gallery }) => {
     <nav className='relative top-20 z-50 my-auto -ml-8 x:-ml-6'>
       <div className='relative'>
         {' '}
-        <ul className='relative z-30 flex w-[180%] flex-col justify-between gap-5 text-sm text-dark-600 dark:text-white'>
+        <ul className='relative z-30 flex w-[180%] flex-col justify-between gap-5 text-sm text-white'>
           {gallery.map(({ id, href, num, label }) => (
             <li
               key={id}
@@ -27,7 +27,7 @@ const GalleryProgressIndicator: React.FC<GallerySlideProps> = ({ gallery }) => {
                 }}
               >
                 <span
-                  className='animate-indicator ml-4 text-white dark:drop-shadow'
+                  className='animate-indicator ml-4 text-white drop-shadow-custom'
                   style={{
                     animationTimeline: label,
                     animationRangeStart: '10cqw',
@@ -41,7 +41,7 @@ const GalleryProgressIndicator: React.FC<GallerySlideProps> = ({ gallery }) => {
         </ul>
         <div className='indicator animate-indicator absolute left-[1.35rem] top-1/2 z-40 -translate-y-1/2'>
           <div
-            className='animate-progress h-0.5 origin-left bg-dark-600 dark:bg-white dark:drop-shadow'
+            className='animate-progress h-0.5 origin-left bg-dark-600 drop-shadow-custom dark:bg-white'
             style={{ animationTimeline: '--scroller' }}
           ></div>
         </div>

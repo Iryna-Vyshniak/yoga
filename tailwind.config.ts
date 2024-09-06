@@ -53,10 +53,11 @@ const config: Config = {
         'dark-text-gradient': 'var(--dark-text-gradient)',
         'light-gradient': 'var(--light-radial-gradient)',
         'dark-gradient': 'var(--dark-radial-gradient)',
+        'dark-linear-gradient': 'var(--dark-linear-gradient)',
         'light-hero':
           'var(--light-radial-gradient), url("/assets/images/hero-bg.jpg")',
         'dark-hero':
-          'var(--dark-radial-gradient), url("/assets/images/hero-bg.jpg")',
+          'var(--dark-linear-gradient), url("/assets/images/hero-bg.jpg")',
         'light-bg-logo':
           'var(--light-logo-radial-gradient), url("/assets/icons/yoga-logo.svg")',
         'dark-bg-logo':
@@ -116,9 +117,11 @@ const config: Config = {
       white: '#ffffff',
       'blue-60': '#d6e2f3',
       'blue-70': '#bed1e8',
+      'blue-75': '#7dd3fc',
       'blue-80': '#9db5d2',
       'blue-85': '#7490b3',
       'blue-90': '#708aab',
+      blue: '#93c5fd',
       'gray-60': '#a1a5bd',
       'gray-70': '#8b89a5',
       'gray-80': '#60627a',
@@ -154,6 +157,7 @@ const config: Config = {
     },
     dropShadow: {
       DEFAULT: ['0 0.5px 0.5px rgba(30, 41, 59, 0.6)'],
+      custom: '0px 0.3px 0.3px rgb(0, 0, 0)',
       sm: [
         '0 0.5px 1px rgba(112, 138, 171, 0.5)',
         '0 0.5px 1px rgba(255, 255, 255, 0.5)',

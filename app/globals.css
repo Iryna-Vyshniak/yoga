@@ -50,11 +50,19 @@
     rgba(2, 6, 23, 0.453) 50%,
     rgba(2, 6, 23, 1) 100%
   );
-  --dark-logo-radial-gradient: radial-gradient(
-    circle,
-    rgba(2, 6, 23, 0.7) 0%,
-    rgba(2, 6, 23, 0.9) 50%,
-    rgba(2, 6, 23, 1) 100%
+
+  --dark-linear-gradient: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0) 0%,
+    rgba(2, 6, 23, 0.2) 50%,
+    #000e4dc2 100%
+  );
+
+  --dark-logo-radial-gradient: linear-gradient(
+    to top,
+    rgba(0, 10, 53, 0.9) 0%,
+    rgba(0, 7, 37, 0.9) 50%,
+    rgb(0, 8, 45) 100%
   );
 
   --light-text-gradient: linear-gradient(
@@ -172,13 +180,13 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .section {
-  /* height: calc(100vh - var(--header-height, 64px)); */
+  min-height: calc(100vh - var(--header-height, 4rem));
   width: 100vw;
   scroll-snap-align: start;
-  overflow-x: hidden;
 }
 
 img,
@@ -314,10 +322,20 @@ svg {
     left: 0;
     top: 0;
     z-index: -10;
-    width: 100%;
-    height: 100vh;
+    inset: 0px;
     @apply bg-light-hero bg-cover bg-fixed bg-center dark:bg-dark-hero;
     animation: mist 240s infinite linear;
+  }
+
+  .dark .hero-container:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    inset: 0px;
+    @apply bg-light-hero bg-cover bg-fixed bg-center dark:bg-dark-hero;
+    animation: none;
   }
 
   @keyframes mist {

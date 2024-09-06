@@ -27,7 +27,7 @@ const Intro = () => {
   if (!show) return null;
 
   return (
-    <section className='remove-scrollbar fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-hidden bg-light-hero bg-cover bg-center bg-no-repeat dark:bg-dark-hero'>
+    <section className='remove-scrollbar fixed inset-0 z-50 flex h-screen w-full items-center justify-center overflow-hidden bg-light-hero bg-cover bg-center bg-no-repeat dark:bg-dark-hero'>
       <div className='flex flex-col items-center justify-center gap-4 rounded-sm p-4 backdrop-blur-sm'>
         <Icon
           type={iconTypes.COMMON}

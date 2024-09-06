@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning={true}>
       <body
         className={cn(
-          'remove-scrollbar text-slate-950 dark:via-slate-950 relative flex flex-col overflow-x-hidden bg-light bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] bg-cover bg-no-repeat font-sans antialiased dark:bg-dark-300 dark:to-dark-200 dark:text-white',
+          'remove-scrollbar text-slate-950 dark:via-slate-950 relative flex flex-col bg-light bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] bg-cover bg-no-repeat font-sans antialiased dark:bg-dark-300 dark:to-dark-200 dark:text-white',
           fontSans.variable,
         )}
       >
